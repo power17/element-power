@@ -16,3 +16,30 @@ If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has a
    1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
    2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
 2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+
+## 提交规范
+ - feat: 新功能
+ - fix: 修改 bug
+ - docs: 文档
+ - perf: 性能相关
+ - refactor: 代码重构（就是不影响使用，内部结构的调整）
+ - test: 测试用例
+ - style: 样式修改
+ - workflow: 工作流
+ - build: 项目打包构建相关的配置修改
+ - ci: 持续集成相关
+ - revert: 恢复上一次提交（回滚）
+ - wip: work in progress 工作中 还没完成
+ - chore: 其他修改（不在上述类型中的修改）
+ - release: 发版
+ - deps: 依赖相关的修改
+
+
+```bash
+$ pnpm install 
+```
+
+# Run in local
+```bash
+$ npm run dev
+```
