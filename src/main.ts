@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
-import './style.scss'
+
 import App from './App.vue'
-import ElContainer from './components/container'
+import ElContainer from './components/Container'
 
 createApp(App)
 	.use(ElContainer)
