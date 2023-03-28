@@ -2,7 +2,7 @@
   "name": "element-power",
   "private": true,
   "version": "0.0.0",
-  "type": "cjs",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
