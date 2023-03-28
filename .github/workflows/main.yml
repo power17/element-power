@@ -14,13 +14,15 @@ jobs:
         with:
           node-version: '17.x'
       - name: install pnpm
-        run: npm install pnpm -g 
+        run: npm install pnpm@7.5.0 -g 
+      - name: install pnpm
+        run: pnpm -v  
       - name: install dep
         run: pnpm install
       - name: build app
         run: npm run build
       - name: scp files to linux
-        uses: appleboy/scp-action@master
+        uses: appleboy/scp-action@v0.0.1
         with:
           host: ${{ secrets.REMOTE_HOST }}
           username: ${{ secrets.REMOTE_USERNAME }}
