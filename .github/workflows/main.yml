@@ -6,7 +6,7 @@ on:
       - release/*
 jobs:
   my_job:
-    runs-on: ubuntu-18.04
+    runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2.7.0
       - name: Setup Node.js environment
@@ -22,7 +22,7 @@ jobs:
       - name: build app
         run: npm run build
       - name: scp files to linux
-        uses: appleboy/scp-action@master
+        uses: betanzos/scp-upload@v1
         with:
           host: ${{ secrets.REMOTE_HOST }}
           username: ${{ secrets.REMOTE_USERNAME }}
