@@ -15,7 +15,7 @@ jobs:
           node-version: '17.x'
  
       - name: install dep
-        run: npm install
+        run: yarn install
       - name: build app
         run: npm run build
       - name: scp files to linux
