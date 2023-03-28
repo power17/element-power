@@ -1,9 +1,6 @@
 <template>
-    <aside 
-        class="el-aside"
-        :style="{width}"
-    >
-    <slot />
+    <aside class="el-aside" :style="{ width }">
+        <slot />
     </aside>
 </template>
 <script lang="ts">
@@ -12,8 +9,8 @@ export default {
 }
 </script>
 <script setup lang="ts">
-import {withDefaults, defineProps} from 'vue'
-interface Props{
+import { withDefaults } from 'vue'
+interface Props {
     width?: string
 }
 withDefaults(defineProps<Props>(), {

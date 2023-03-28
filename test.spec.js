@@ -9,6 +9,6 @@ function sayHello(name, fn) {
 test('测试函数', () => {
   const fn = jest.fn()
 
-  sayHello('大圣', fn)
+  sayHello('power', fn)
   expect(fn).toHaveBeenCalled()
 })
