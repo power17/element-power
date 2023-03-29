@@ -7,7 +7,6 @@
     "strict": true,
     "jsx": "preserve",
     "resolveJsonModule": true,
-    "isolatedModules": true,
     "esModuleInterop": true,
     "lib": [
       "ESNext",
@@ -22,12 +21,7 @@
     "src/**/*.d.ts",
     "src/**/*.tsx",
     "src/**/*.vue",
-    "src/components/Container/index.js",
-    "src/components/Container/index.js"
+    "src/components/Container/index.ts",
+    "src/components/Container/index.ts"
   ],
-  "references": [
-    {
-      "path": "./tsconfig.node.json"
-    }
-  ]
 }
