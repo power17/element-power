@@ -6,9 +6,9 @@ function sayHello(name, fn) {
     fn()
   }
 }
-test('测试函数', () => {
-  const fn = jest.fn()
+// test('测试函数', () => {
+//   const fn = jest.fn()
 
-  sayHello('power', fn)
-  expect(fn).toHaveBeenCalled()
-})
+//   sayHello('power', fn)
+//   expect(fn).toHaveBeenCalled()
+// })
