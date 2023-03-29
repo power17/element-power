@@ -21,7 +21,9 @@
     "src/**/*.ts",
     "src/**/*.d.ts",
     "src/**/*.tsx",
-    "src/**/*.vue"
+    "src/**/*.vue",
+    "src/components/Container/index.js",
+    "src/components/Container/index.js"
   ],
   "references": [
     {
