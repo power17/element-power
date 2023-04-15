@@ -6,9 +6,11 @@ import vue from '@vitejs/plugin-vue'
 export default defineConfig(({ command }) => {
   let base = ''
   base = command === 'build' ? '/element' : './'
-  console.log(base, command)
   return {
-    base: base,
+    base,
+    build: {
+      outDir: 'element'
+    },
     plugins: [
       vue(),
     ],
