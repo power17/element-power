@@ -6,6 +6,8 @@ module.exports = {
     '^.+\\.jsx?$': 'babel-jest',
     //.ts文件用ts-jest处理
     '^.+\\.ts$': 'ts-jest',
+    
   },
   testMatch: ['**/?(*.)+(spec).[jt]s?(x)'],
+  collectCoverage: true
 }

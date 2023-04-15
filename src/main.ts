@@ -6,7 +6,7 @@ import ElContainer from './components/container'
 import ElButton from './components/button'
 const app = createApp(App)
 app.config.globalProperties.$POWER = {
-	size: 'mini'
+	size: 'large'
 }
 app.use(ElContainer)
 	.use(ElButton)

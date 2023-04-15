@@ -1,14 +1,16 @@
-name: deploy
+name: publish to tencentyun
 on:
   push:
-    branches:
-      - main
-      - release/*
+    branches: [ main ] 
+  pull_request: 
+    branches: [ main ]
 jobs:
-  my_job:
+  build:
     runs-on: ubuntu-latest
     steps:
+      # 下载代码 
       - uses: actions/checkout@v3.5.0
+      # 安装nodejs
       - name: Setup Node.js environment
         uses: actions/setup-node@v3.6.0
         with:
@@ -21,12 +23,13 @@ jobs:
         run: pnpm install
       - name: build app
         run: npm run build
-      - name: scp files to linux
-        uses: appleboy/scp-action@v0.0.1
-        with:
-          host: ${{ secrets.REMOTE_HOST }}
-          username: ${{ secrets.REMOTE_USERNAME }}
-          password: ${{ secrets.REMOTE_PASSWORLD }}
-          port: ${{ secrets.REMOTE_PORT }}
-          source: 'dist/'
-          target: ${{ secrets.REMOTE_TARGET }}
+      # 发布到云服务  
+      - name: Deploy to Aliyun 
+        uses: easingthemes/ssh-deploy@v2.1.1 
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.ACCESS_TOKEN }}
+          ARGS: "-avzr --delete" 
+          SOURCE: "dist/"
+          REMOTE_HOST: ${{ secrets.SERVER_IP }}
+          REMOTE_USER: "root"
+          TARGET: ${{ secrets.TARGET }}

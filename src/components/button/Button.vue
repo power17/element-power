@@ -23,7 +23,6 @@ const props = withDefaults(defineProps<Props>(), {
     type: ''
 })
 const globalConfig = useGlobalConfig()
-console.log(globalConfig)
 const buttonSize = computed(() => {
     return props.size || globalConfig.size
 })

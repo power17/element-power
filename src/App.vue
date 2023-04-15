@@ -1,6 +1,11 @@
 <template>
 	<div>
-		<el-button type="primary" size="small"> 确定</el-button>
+		<el-button type="primary"> 确定</el-button>
+		<el-button type="success"> 确定</el-button>
+		<el-button type="danger"> 确定</el-button>
+		<el-button>确定</el-button>
+		<el-button size="small">确定</el-button>
+
 	</div>
 	<div>
 		<el-container>
@@ -30,7 +35,7 @@
 </template>
 
 <style>
-body {
+ body {
 	width: 1000px;
 	margin: 10px auto;
 }
